@@ -1,0 +1,20 @@
+.Nav {
+    width: 100%;
+    height: var(--nav-heigth);
+    background: var(--invert-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.links {
+    margin-left: auto;
+}
+
+.link {
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
