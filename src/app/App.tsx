@@ -1,10 +1,8 @@
-import { Suspense, useContext, useState } from "react"
-import { Routes, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./styles/index.scss"
-import { AboutPage } from "pages/AboutPage"
-import { MainPage } from "pages/MainPage"
 import { useTheme } from "app/providers/ThemeProvider"
 import { classNames } from "shared/lib/classNames/classNames"
+import { AppRouter } from "app/providers/router"
 
 export enum Theme {
     LIGHT = "light",
@@ -19,12 +17,7 @@ export const App = () => {
             <Link to={"/"}>Глав</Link>
             <Link to={"/about"}>О</Link>
             <button onClick={toggleTheme}>{theme}</button>
-            <Suspense fallback={<div>loading...</div>}>
-                <Routes>
-                    <Route path={"/about"} element={<AboutPage />} />
-                    <Route path={"/"} element={<MainPage />} />
-                </Routes>
-            </Suspense>
+            <AppRouter />
         </div>
     )
 }
