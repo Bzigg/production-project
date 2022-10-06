@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import "./styles/index.scss"
 import { useTheme } from "app/providers/ThemeProvider"
 import { classNames } from "shared/lib/classNames/classNames"
@@ -11,13 +10,12 @@ export enum Theme {
 }
 
 export const App = () => {
-    const { theme, toggleTheme } = useTheme()
+    const { theme } = useTheme()
 
     return (
         <div className={classNames("app", {}, [theme])}>
             <Navbar />
             <AppRouter />
-            <button onClick={toggleTheme}>{theme}</button>
         </div>
     )
 }
