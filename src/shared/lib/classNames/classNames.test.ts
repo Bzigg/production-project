@@ -1,4 +1,6 @@
-import { classNames } from "./classNames"
+// import { classNames } from "./classNames"
+// в проекте абсолютные пути
+import { classNames } from "shared/lib/classNames/classNames"
 
 describe("classNames", () => {
     test("только с первым параметром", () => {

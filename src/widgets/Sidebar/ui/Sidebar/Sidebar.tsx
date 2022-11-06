@@ -14,13 +14,16 @@ export const Sidebar = () => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(
                 cls.Sidebar,
                 { [cls.collapsed]: collapsed },
                 []
             )}
         >
-            <AppButton onClick={onToggle}>1</AppButton>
+            <AppButton data-testid="sidebar-toggle" onClick={onToggle}>
+                1
+            </AppButton>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />

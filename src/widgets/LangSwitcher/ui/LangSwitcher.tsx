@@ -12,7 +12,7 @@ export const LangSwitcher = (props: ILangSwitcherProps) => {
 
     const { t, i18n } = useTranslation()
 
-    const change = () => {
+    const change = async () => {
         i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru")
     }
 
