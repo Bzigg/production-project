@@ -12,7 +12,12 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const AppButton: FC<AppButtonProps> = (props) => {
-    const { className, children, theme, ...otherProps } = props
+    const {
+        className,
+        children,
+        theme = ThemeButton.CLEAR,
+        ...otherProps
+    } = props
     return (
         <button
             className={classNames(cls.AppButton, {}, [className, cls[theme]])}

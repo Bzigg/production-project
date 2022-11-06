@@ -1,9 +1,16 @@
+import { ErrorBtn } from "app/providers/ErrorBoundary"
 import { useTranslation } from "react-i18next"
 
 const MainPage = () => {
     const { t } = useTranslation("main")
 
-    return <div>{t("Главная")}</div>
+    return (
+        <div>
+            <ErrorBtn />
+            <br />
+            {t("Главная")}
+        </div>
+    )
 }
 
 export default MainPage
