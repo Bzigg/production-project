@@ -40,8 +40,24 @@ Clear.args = {
     theme: ThemeButton.CLEAR,
 }
 
+export const ClearDark = Template.bind({})
+ClearDark.args = {
+    children: "Text",
+    theme: ThemeButton.CLEAR,
+}
+
+ClearDark.decorators = [ThemeDecorator(Theme.DARK)]
+
 export const Outline = Template.bind({})
 Outline.args = {
     children: "Text",
     theme: ThemeButton.OUTLINE,
 }
+
+export const OutlineDark = Template.bind({})
+OutlineDark.args = {
+    children: "Text",
+    theme: ThemeButton.OUTLINE,
+}
+
+Outline.decorators = [ThemeDecorator(Theme.DARK)]
