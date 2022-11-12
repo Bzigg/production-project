@@ -24,6 +24,36 @@
     bottom: 32px;
 }
 
+.items {
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin-top: 8px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin-left: 8px;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.icon {
+    fill: var(--invert-secondary-color);
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
@@ -35,5 +65,11 @@
     .lang {
         margin-left: 0;
         margin-top: 4px;
+    }
+
+    .text {
+        opacity: 0;
+        width: 0;
+        transition: 0.2s opacity;
     }
 }
