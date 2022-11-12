@@ -79,9 +79,6 @@
         "react-i18next": "^11.15.5"
     },
     "loki": {
-        "looks-same": {
-            "ignoreCaret": true
-        },
         "configurations": {
             "chrome.laptop": {
                 "target": "chrome.app",
