@@ -10,6 +10,7 @@ describe("AppButton", () => {
     test("тема clear", () => {
         render(<AppButton theme={ButtonTheme.CLEAR}>Test</AppButton>)
         expect(screen.getByText("Test")).toHaveClass("clear")
-        screen.debug()
+        // вывод DOM элемента в консоль
+        // screen.debug()
     })
 })
