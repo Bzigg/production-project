@@ -1,4 +1,5 @@
 import { ErrorBtn } from "app/providers/ErrorBoundary"
+import { Counter } from "entities/Counter"
 import { useTranslation } from "react-i18next"
 
 const MainPage = () => {
@@ -9,6 +10,8 @@ const MainPage = () => {
             <ErrorBtn />
             <br />
             {t("Главная")}
+            <br />
+            <Counter></Counter>
         </div>
     )
 }
